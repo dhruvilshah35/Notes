@@ -15,6 +15,8 @@
 		2EC2DAB62353D36E001FDF41 /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2DAB52353D36E001FDF41 /* NotesTests.swift */; };
 		2EC2DAC12353D36E001FDF41 /* NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2DAC02353D36E001FDF41 /* NotesUITests.swift */; };
 		2EC2DACF2353D3BA001FDF41 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2DACE2353D3BA001FDF41 /* NotesViewController.swift */; };
+		2EC2DAD123557E89001FDF41 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2DAD023557E89001FDF41 /* DetailViewController.swift */; };
+		2EC2DAD323557F91001FDF41 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2DAD223557F90001FDF41 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2EC2DAC02353D36E001FDF41 /* NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITests.swift; sourceTree = "<group>"; };
 		2EC2DAC22353D36E001FDF41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EC2DACE2353D3BA001FDF41 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		2EC2DAD023557E89001FDF41 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2EC2DAD223557F90001FDF41 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				2EC2DA9D2353D36B001FDF41 /* AppDelegate.swift */,
 				2EC2DACE2353D3BA001FDF41 /* NotesViewController.swift */,
+				2EC2DAD023557E89001FDF41 /* DetailViewController.swift */,
+				2EC2DAD223557F90001FDF41 /* TableViewCell.swift */,
 				2EC2DAA12353D36B001FDF41 /* Main.storyboard */,
 				2EC2DAA72353D36E001FDF41 /* Assets.xcassets */,
 				2EC2DAA92353D36E001FDF41 /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC2DAD323557F91001FDF41 /* TableViewCell.swift in Sources */,
 				2EC2DAA62353D36B001FDF41 /* Notes.xcdatamodeld in Sources */,
 				2EC2DA9E2353D36B001FDF41 /* AppDelegate.swift in Sources */,
 				2EC2DACF2353D3BA001FDF41 /* NotesViewController.swift in Sources */,
+				2EC2DAD123557E89001FDF41 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
