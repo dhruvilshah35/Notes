@@ -18,6 +18,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Notes", style: .plain, target: self, action: #selector(DetailViewController.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
         fetchData()
     }
     
@@ -37,5 +40,32 @@ class DetailViewController: UIViewController {
             {
                 print("Error at fetch")
             }
-    }  
+    }
+    func updateData()
+    {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        fetch.predicate = NSPredicate(format: "title == %@", selectedCell)
+        do
+        {
+            let result = try managedContext.fetch(fetch)
+            let object = result[0] as! NSManagedObject
+            object.setValue(message.text, forKey: "message")
+            do
+            {
+                try managedContext.save()
+            } catch
+            {
+                print("error at save update")
+            }
+        } catch
+        {
+            print("error at fetch data in update")
+        }
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+        updateData()
+        _ = navigationController?.popViewController(animated: true)
+    }
 }
