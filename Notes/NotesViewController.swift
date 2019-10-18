@@ -74,6 +74,28 @@ class NotesViewController: UIViewController
         }
         tableView.reloadData()
     }
+
+    func deleteAllData(_ cell: String)
+    {
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        deleteFetch.predicate = NSPredicate(format:"title == %@",cell)
+        
+        do {
+            let test = try managedContext?.fetch(deleteFetch)
+            let object = test![0] as! NSManagedObject
+            managedContext?.delete(object)
+            do
+            {
+                try managedContext?.save()
+            } catch
+            {
+                print("error")
+            }
+        } catch {
+            print ("There was an error")
+        }
+    }
 }
 
 extension NotesViewController: UITableViewDelegate, UITableViewDataSource
@@ -97,5 +119,14 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource
         let DestVC = segue.destination as! DetailViewController
         DestVC.selectedCell = titles[select.row]
     }
-
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: .default, title: "Delete" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            
+        self.deleteAllData(self.titles[indexPath.row])
+        self.fetchData()
+        tableView.reloadData()
+    })
+        return [shareAction]
+    }
 }
