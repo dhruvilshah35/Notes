@@ -122,7 +122,7 @@ extension NotesViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let shareAction = UITableViewRowAction(style: .default, title: "Delete" , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
-            
+        
         self.deleteAllData(self.titles[indexPath.row])
         self.fetchData()
         tableView.reloadData()
