@@ -21,12 +21,12 @@ This app will help you to create, modify and delete note.
 
 # Screenshot:
 
-![](Screenshots/mainView.PNG)
-![](Screenshots/createNote.PNG)
-![](Screenshots/noteAdded.PNG)
-![](Screenshots/readMessage.PNG)
-![](Screenshots/messageEdited.PNG)
-![](Screenshots/deleteNote.PNG)
+![](Screenshots/mainView.png)
+![](Screenshots/createNote.png)
+![](Screenshots/noteAdded.png)
+![](Screenshots/readMessage.png)
+![](Screenshots/messageEdited.png)
+![](Screenshots/deleteNote.png)
 
 
 
