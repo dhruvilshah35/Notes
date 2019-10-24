@@ -1,10 +1,10 @@
 # Notes
 
-# Basic Idea:
+### Basic Idea:
 
 This app will help you to create, modify and delete note. 
 
-# Steps for Application:
+### Steps for Application:
 
 1) Create note using '+' button on top.
 2) Add title and message.
@@ -12,21 +12,21 @@ This app will help you to create, modify and delete note.
 4) Message can be edited.
 5) By swiping left to the title, note can be deleted.
 
-# Requirements:
+### Requirements:
 
 1) Mac OS 10 or higher
 2) Swift programming
 3) IOS latest version
-4) UIKit
+4) UIKit and Xcode
 
-# Screenshot:
+### Screenshot:
 
-![](Screenshots/mainView.png)
-![](Screenshots/createNote.png)
-![](Screenshots/noteAdded.png)
-![](Screenshots/readMessage.png)
-![](Screenshots/messageEdited.png)
-![](Screenshots/deleteNote.png)
+![](Screenshot/mainView.png)
+![](Screenshot/createNote.png)
+![](Screenshot/noteAdded.png)
+![](Screenshot/readMessage.png)
+![](Screenshot/messageEdited.png)
+![](Screenshot/deleteNote.png)
 
 
 
